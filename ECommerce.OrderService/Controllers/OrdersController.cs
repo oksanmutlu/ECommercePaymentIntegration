@@ -1,6 +1,7 @@
 ﻿using Ecommerce.OrderService.Services;
 using ECommerce.OrderService.Data;
 using ECommerce.OrderService.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,7 @@ namespace ECommerce.OrderService.Controllers
 
     [Route("api/orders")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class OrdersController : ControllerBase
     {
         private readonly OrderDbContext _context;

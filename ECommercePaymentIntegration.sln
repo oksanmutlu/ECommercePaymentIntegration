@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.ApiGateway", "ECommerce.ApiGateway\ECommerce.ApiGateway.csproj", "{70AD7418-38D1-461C-A498-CB4A1489D968}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.OrderService", "ECommerce.OrderService\ECommerce.OrderService.csproj", "{826F7619-9ACF-4BCD-8E8A-8B7FA0A2677A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.PaymentService", "ECommerce.PaymentService\ECommerce.PaymentService.csproj", "{B80816C8-B08D-490E-8784-AE9B85DE4B99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.AuthService", "ECommerce.AuthService\ECommerce.AuthService.csproj", "{EB09AB00-9056-4792-ADB9-A2CD98BF77AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B80816C8-B08D-490E-8784-AE9B85DE4B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B80816C8-B08D-490E-8784-AE9B85DE4B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B80816C8-B08D-490E-8784-AE9B85DE4B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB09AB00-9056-4792-ADB9-A2CD98BF77AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB09AB00-9056-4792-ADB9-A2CD98BF77AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB09AB00-9056-4792-ADB9-A2CD98BF77AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB09AB00-9056-4792-ADB9-A2CD98BF77AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

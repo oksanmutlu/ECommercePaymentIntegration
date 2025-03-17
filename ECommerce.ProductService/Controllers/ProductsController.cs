@@ -2,11 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using ECommerce.ProductService.Data;
 using ECommerce.ProductService.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ECommerce.ProductService.Controllers
 {
     [Route("api/products")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly ProductDbContext _context;
