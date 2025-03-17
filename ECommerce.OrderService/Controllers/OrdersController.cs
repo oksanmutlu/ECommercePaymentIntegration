@@ -52,7 +52,7 @@ namespace ECommerce.OrderService.Controllers
                 Amount = order.TotalAmount
             };
 
-            var isPreorderSuccessful = await balanceService.PreorderPayment(preorderRequest);
+            var isPreorderSuccessful = await balanceService.PreorderPaymentAsync(preorderRequest);
 
             if (!isPreorderSuccessful)
             {
@@ -82,7 +82,7 @@ namespace ECommerce.OrderService.Controllers
 
             // Balance Management Complete Payment
             var completeRequest = new CompletePaymentRequest { OrderId = order.OrderId };
-            var isCompleteSuccessful = await balanceService.CompletePayment(completeRequest);
+            var isCompleteSuccessful = await balanceService.CompletePaymentAsync(completeRequest);
 
             if (!isCompleteSuccessful)
                 return BadRequest(new { error = "Payment failed", message = "Could not complete payment." });
@@ -112,7 +112,7 @@ namespace ECommerce.OrderService.Controllers
 
             // Balance Management Preorder Cancellation
             var cancelRequest = new CancelPaymentRequest { OrderId = order.OrderId };
-            var isCancelSuccessful = await balanceService.CancelPayment(cancelRequest);
+            var isCancelSuccessful = await balanceService.CancelPaymentAsync(cancelRequest);
 
             if (!isCancelSuccessful)
                 return BadRequest(new { error = "Cancellation failed", message = "Could not cancel payment." });

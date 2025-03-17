@@ -4,6 +4,8 @@ using Ecommerce.OrderService.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Polly;
+using ECommerce.OrderService.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,7 +40,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpClient<BalanceService>();
+builder.Services.AddHttpClient<IBalanceService, BalanceService>()
+    .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(5)); // Let's add a timeout of seconds
+
 
 var app = builder.Build();
 
