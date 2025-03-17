@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ECommerce.OrderService.Data;
+using Ecommerce.OrderService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHttpClient<BalanceService>();
+
 
 var app = builder.Build();
 
